@@ -122,7 +122,7 @@ export function Hero() {
             className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[32px] border border-white/15 bg-black/40 p-4"
           >
             <img
-              src="/hero.png"
+              src={`${import.meta.env.BASE_URL}hero.png`}
               alt="Tarek Ahmed"
               className="h-full w-full object-contain"
               loading="lazy"
