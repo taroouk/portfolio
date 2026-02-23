@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 export function Hero() {
   return (
     <section id="top" className="relative flex min-h-screen items-center pt-5">
-
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2">
         {/* LEFT */}
         <motion.div
@@ -26,7 +25,7 @@ export function Hero() {
             }}
             className="text-sm text-white/60"
           >
-            Full-Stack Developer
+            Full-Stack Developer • Freelance
           </motion.p>
 
           <motion.h1
@@ -54,10 +53,10 @@ export function Hero() {
                 transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
               },
             }}
-            className="mt-6 text-base leading-7 text-white/70"
+            className="mt-6 max-w-xl text-base leading-7 text-white/70"
           >
-            I build scalable web applications end-to-end — clean UI on the
-            frontend, solid APIs and business logic on the backend.
+            I build end-to-end web applications — clean, fast user interfaces on the frontend,
+            robust APIs on the backend, and reliable deployments ready for real-world use.
           </motion.p>
 
           <motion.div
@@ -95,7 +94,7 @@ export function Hero() {
                 transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
               },
             }}
-            className="mt-8 flex flex-wrap gap-3 text-sm text-white/70"
+            className="mt-8 flex flex-wrap items-center gap-3 text-sm text-white/70"
           >
             <a className="hover:text-white" href="mailto:tarekelfanty@gmail.com">
               tarekelfanty@gmail.com
@@ -103,6 +102,15 @@ export function Hero() {
             <span className="text-white/30">•</span>
             <a className="hover:text-white" href="tel:+201033967886">
               +20 10 339 67886
+            </a>
+            <span className="text-white/30">•</span>
+            <a
+              className="hover:text-white"
+              href="https://github.com/taroouk"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
             </a>
           </motion.div>
         </motion.div>
