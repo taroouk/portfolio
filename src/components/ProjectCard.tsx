@@ -22,12 +22,14 @@ function Badge({
 }
 
 function projectImageSrc(title: string) {
+  const base = import.meta.env.BASE_URL;
+
   const map: Record<string, string> = {
-    TooGoodForMerch: "/projects/toogoodformerch.jpg",
-    "StyleSphere Store": "/projects/stylesphere.jpg",
-    InsightBoard: "/projects/insightboard.jpg",
-    "DreamKey Partners": "/projects/dreamkey.jpg",
-    "GEM Opening Project": "/projects/gem-opening.jpg",
+    TooGoodForMerch: `${base}projects/toogoodformerch.jpg`,
+    "StyleSphere Store": `${base}projects/stylesphere.jpg`,
+    InsightBoard: `${base}projects/insightboard.jpg`,
+    "DreamKey Partners": `${base}projects/dreamkey.jpg`,
+    "GEM Opening Project": `${base}projects/gem-opening.jpg`,
   };
 
   return map[title] ?? "";
