@@ -1,17 +1,16 @@
-body{
-  background:#07090f;
-  color:white;
-  }
-  
-  body::before{
-  content:"";
-  position:fixed;
-  top:-200px;
-  left:50%;
-  transform:translateX(-50%);
-  width:800px;
-  height:800px;
-  background:radial-gradient(circle,#1a2cff33,transparent 70%);
-  filter:blur(120px);
-  z-index:-1;
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #05060a;
+}
