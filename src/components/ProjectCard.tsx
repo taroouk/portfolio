@@ -12,14 +12,10 @@ function Badge({
     tone === "success"
       ? "border-emerald-500/20 bg-emerald-500/10 text-emerald-100/90"
       : tone === "warning"
-      ? "border-amber-500/20 bg-amber-500/10 text-amber-100/90"
-      : "border-white/10 bg-white/5 text-white/70";
+        ? "border-amber-500/20 bg-amber-500/10 text-amber-100/90"
+        : "border-white/10 bg-white/5 text-white/70";
 
-  return (
-    <span className={`rounded-full border px-3 py-1 text-xs ${toneClass}`}>
-      {children}
-    </span>
-  );
+  return <span className={`rounded-full border px-3 py-1 text-xs ${toneClass}`}>{children}</span>;
 }
 
 export function ProjectCard({ p }: { p: Project }) {
@@ -30,13 +26,12 @@ export function ProjectCard({ p }: { p: Project }) {
   return (
     <motion.article
       whileHover={{ y: -4 }}
-      transition={{ duration: 0.25 }}
-      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5"
+      transition={{ duration: 0.22 }}
+      className="group relative overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.04]"
     >
-      <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-white/10 blur-3xl opacity-0 transition group-hover:opacity-100" />
-      <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-white/10 blur-3xl opacity-0 transition group-hover:opacity-100" />
+      <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-white/10 opacity-0 blur-3xl transition group-hover:opacity-100" />
 
-      <div className="relative h-52 overflow-hidden border-b border-white/10 bg-black/30 sm:h-60">
+      <div className="relative h-56 overflow-hidden border-b border-white/10 bg-black/30 sm:h-64">
         <img
           src={imgSrc}
           alt={`${p.title} preview`}
@@ -55,22 +50,21 @@ export function ProjectCard({ p }: { p: Project }) {
         </div>
       </div>
 
-      <div className="relative p-8">
-        <h3 className="text-xl font-semibold tracking-tight text-white/95">
-          {p.title}
-        </h3>
-        <p className="mt-1 text-sm text-white/70">{p.subtitle}</p>
+      <div className="p-8">
+        <h3 className="text-xl font-semibold tracking-tight text-white/95">{p.title}</h3>
+        <p className="mt-1 text-sm text-white/62">{p.subtitle}</p>
 
-        <p className="mt-5 text-sm leading-6 text-white/80">{p.description}</p>
+        <p className="mt-5 text-sm leading-7 text-white/78">{p.description}</p>
 
-        <div className="mt-6 rounded-2xl border border-white/10 bg-black/30 p-6">
-          <div className="text-xs font-semibold tracking-wider text-white/60">
+        <div className="mt-6 rounded-2xl border border-white/10 bg-black/25 p-6">
+          <div className="text-xs font-semibold tracking-[0.18em] text-white/55">
             KEY HIGHLIGHTS
           </div>
+
           <ul className="mt-4 grid gap-3 md:grid-cols-2">
             {p.highlights.map((h) => (
-              <li key={h} className="flex gap-3 text-sm text-white/75">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/60" />
+              <li key={h} className="flex gap-3 text-sm text-white/74">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/55" />
                 <span className="leading-6">{h}</span>
               </li>
             ))}
@@ -81,7 +75,7 @@ export function ProjectCard({ p }: { p: Project }) {
           {p.tech.map((t) => (
             <span
               key={t}
-              className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-xs text-white/75"
+              className="rounded-full border border-white/10 bg-black/25 px-3 py-1 text-xs text-white/72"
             >
               {t}
             </span>
@@ -99,7 +93,7 @@ export function ProjectCard({ p }: { p: Project }) {
               {isInProgress ? "Preview" : "Live Demo"}
             </a>
           ) : (
-            <span className="rounded-xl border border-white/10 bg-black/30 px-4 py-2 text-sm text-white/70">
+            <span className="rounded-xl border border-white/10 bg-black/25 px-4 py-2 text-sm text-white/70">
               No public live demo
             </span>
           )}

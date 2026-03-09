@@ -2,14 +2,15 @@ import { motion } from "framer-motion";
 import { Container } from "../components/Container";
 
 export function Hero() {
+  const base = import.meta.env.BASE_URL;
+
   return (
-    <section id="top" className="relative py-20">
-      {/* Background */}
-      <div className="fixed inset-0 -z-10 bg-[#05060a]" />
-      <div className="fixed inset-0 -z-10 opacity-70 [background:radial-gradient(1000px_circle_at_15%_10%,rgba(99,102,241,0.22),transparent_55%),radial-gradient(900px_circle_at_85%_20%,rgba(34,211,238,0.18),transparent_55%),radial-gradient(900px_circle_at_50%_90%,rgba(168,85,247,0.14),transparent_60%)]" />
+    <section id="top" className="relative overflow-hidden pt-16 pb-20 md:pt-20 md:pb-24">
+      <div className="absolute left-1/2 top-12 -z-10 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[140px]" />
+      <div className="absolute right-[10%] top-[18%] -z-10 h-[300px] w-[300px] rounded-full bg-cyan-400/8 blur-[120px]" />
 
       <Container>
-        <div className="grid items-center gap-10 md:grid-cols-2">
+        <div className="grid items-center gap-14 lg:grid-cols-[1.02fr_0.98fr]">
           <motion.div
             initial="hidden"
             animate="show"
@@ -17,10 +18,21 @@ export function Hero() {
               hidden: { opacity: 0 },
               show: { opacity: 1, transition: { staggerChildren: 0.08 } },
             }}
+            className="max-w-[640px]"
           >
-            <motion.p
+            <motion.div
               variants={{
-                hidden: { opacity: 0, y: 10, filter: "blur(6px)" },
+                hidden: { opacity: 0, y: 10 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+              }}
+              className="inline-flex rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[11px] text-white/60 backdrop-blur-sm"
+            >
+              Full-Stack Developer • Available for freelance projects
+            </motion.div>
+
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 14, filter: "blur(6px)" },
                 show: {
                   opacity: 1,
                   y: 0,
@@ -28,103 +40,65 @@ export function Hero() {
                   transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
                 },
               }}
-              className="text-sm text-white/60"
+              className="mt-6 max-w-[620px] text-5xl font-semibold leading-[0.96] tracking-[-0.04em] text-white md:text-7xl"
             >
-              Full-Stack Developer • Freelance
-            </motion.p>
-
-            <motion.h1
-              variants={{
-                hidden: { opacity: 0, y: 14, filter: "blur(8px)" },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
-                },
-              }}
-              className="mt-3 text-4xl font-bold leading-tight md:text-6xl"
-            >
-              Hi, I’m Tarek Ahmed
+              I build polished
+              <br />
+              web products
+              <br />
+              that feel premium.
             </motion.h1>
 
             <motion.p
               variants={{
-                hidden: { opacity: 0, y: 12, filter: "blur(6px)" },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
-                },
+                hidden: { opacity: 0, y: 12 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
-              className="mt-6 max-w-xl text-base leading-7 text-white/70"
+              className="mt-7 max-w-[620px] text-[15px] leading-8 text-white/68 md:text-[17px]"
             >
-              I build end-to-end web applications — clean UI on the frontend,
-              solid APIs and business logic on the backend, and reliable deployments.
+              Hi, I&apos;m Tarek Ahmed. I design and develop complete web
+              experiences — from modern interfaces to scalable backend APIs,
+              with a strong focus on smooth UX, refined visuals, and
+              production-ready quality.
             </motion.p>
 
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 10 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
-                },
+                show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
               }}
-              className="mt-8 flex flex-wrap gap-4"
+              className="mt-9 flex flex-wrap gap-4"
             >
               <a
                 href="#projects"
-                className="rounded-xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:-translate-y-0.5 hover:opacity-90"
+                className="rounded-2xl bg-white px-7 py-3.5 text-sm font-medium text-black transition hover:-translate-y-0.5 hover:opacity-90"
               >
                 View Projects
               </a>
 
               <a
-                href="#contact"
-                className="rounded-xl border border-white/20 px-6 py-3 text-sm transition hover:-translate-y-0.5 hover:bg-white/5"
+                href={`${base}cv.pdf`}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl border border-white/15 bg-white/[0.04] px-7 py-3.5 text-sm text-white transition hover:-translate-y-0.5 hover:bg-white/[0.08]"
               >
-                Contact Me
+                Show CV
               </a>
             </motion.div>
 
             <motion.div
               variants={{
-                hidden: { opacity: 0, y: 8 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
-                },
+                hidden: { opacity: 0, y: 10 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
               }}
-              className="mt-8 flex flex-wrap items-center gap-3 text-sm text-white/70"
+              className="mt-8 flex flex-wrap items-center gap-3 text-xs text-white/52 md:text-sm"
             >
-              <a className="hover:text-white" href="mailto:tarekelfanty@gmail.com">
+              <a className="transition hover:text-white" href="mailto:tarekelfanty@gmail.com">
                 tarekelfanty@gmail.com
               </a>
-              <span className="text-white/30">•</span>
-              <a className="hover:text-white" href="tel:+201033967886">
-                +20 10 339 67886
-              </a>
-              <span className="text-white/30">•</span>
-              <a
-                className="hover:text-white"
-                href="https://github.com/taroouk"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-              <span className="text-white/30">•</span>
-              <a
-                className="hover:text-white"
-                href="https://www.facebook.com/tarek.ahmed.zakaria"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Facebook
+              <span className="text-white/20">•</span>
+              <a className="transition hover:text-white" href="tel:+201033967886">
+                WhatsApp: +20 10 339 67886
               </a>
             </motion.div>
           </motion.div>
@@ -132,25 +106,38 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="relative"
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
+            className="relative mx-auto w-full max-w-[520px]"
           >
-            <div className="absolute -inset-8 rounded-full bg-white/10 blur-3xl" />
+            <div className="absolute -inset-10 rounded-full bg-cyan-400/10 blur-[120px]" />
 
-            <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[32px] border border-white/15 bg-black/40 p-8">
-              <div className="text-sm text-white/60">Available for freelance</div>
-              <div className="mt-2 text-2xl font-semibold tracking-tight">
-                Let’s build something solid.
+            <div className="relative rounded-[34px] border border-white/10 bg-gradient-to-b from-white/[0.09] to-white/[0.04] p-4 shadow-[0_25px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+              <div className="overflow-hidden rounded-[26px] border border-white/10 bg-[radial-gradient(circle_at_top,#173047_0%,#0d1621_45%,#0a1017_100%)]">
+                <img
+                  src={`${base}hero.png`}
+                  alt="Tarek Ahmed portrait"
+                  className="h-[500px] w-full object-cover object-top md:h-[560px]"
+                />
               </div>
-              <div className="mt-4 text-sm leading-6 text-white/70">
-                Clean UI, reliable APIs, and production-ready deployments.
+
+              <div className="absolute inset-x-4 bottom-4">
+                <div className="grid grid-cols-3 gap-3 rounded-[22px] border border-white/10 bg-[#0c1018]/88 p-3 backdrop-blur-xl">
+                  <div className="rounded-2xl bg-white/[0.05] py-3 text-center">
+                    <div className="text-lg font-semibold text-white">10+</div>
+                    <div className="mt-1 text-[11px] text-white/55">Projects</div>
+                  </div>
+
+                  <div className="rounded-2xl bg-white/[0.05] py-3 text-center">
+                    <div className="text-lg font-semibold text-white">4+</div>
+                    <div className="mt-1 text-[11px] text-white/55">Years</div>
+                  </div>
+
+                  <div className="rounded-2xl bg-white/[0.05] py-3 text-center">
+                    <div className="text-lg font-semibold text-white">24h</div>
+                    <div className="mt-1 text-[11px] text-white/55">Response</div>
+                  </div>
+                </div>
               </div>
-              <a
-                href="#contact"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-medium text-black hover:opacity-90"
-              >
-                Get in touch
-              </a>
             </div>
           </motion.div>
         </div>
