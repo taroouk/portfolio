@@ -6,11 +6,9 @@ export function SectionTitle({
     subtitle?: string;
   }) {
     return (
-      <div className="mb-8">
-        <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
-        {subtitle ? (
-          <p className="mt-2 max-w-2xl text-sm text-white/70">{subtitle}</p>
-        ) : null}
+      <div className="mb-10">
+        <h2 className="text-3xl font-bold">{title}</h2>
+        <p className="text-white/50 mt-2">{subtitle}</p>
       </div>
     );
   }

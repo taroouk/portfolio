@@ -2,29 +2,31 @@ import { Container } from "../components/Container";
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#05060a]/70 backdrop-blur">
+    <nav className="py-6">
       <Container>
-        <div className="flex items-center justify-between py-4">
-          <a href="#top" className="text-sm font-semibold tracking-tight">
-            Tarek Ahmed
-          </a>
+        <div className="flex justify-between items-center">
 
-          <nav className="flex items-center gap-4 text-sm text-white/70">
-            <a className="hover:text-white" href="#about">
-              About
+          <div className="font-bold text-lg">
+            Tarek Ahmed
+          </div>
+
+          <div className="flex gap-6 text-sm text-white/70">
+
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+
+            <a
+              href="/cv.pdf"
+              className="border border-white/20 px-4 py-1 rounded-lg"
+            >
+              CV
             </a>
-            <a className="hover:text-white" href="#projects">
-              Projects
-            </a>
-            <a className="hover:text-white" href="#skills">
-              Skills
-            </a>
-            <a className="hover:text-white" href="#contact">
-              Contact
-            </a>
-          </nav>
+
+          </div>
         </div>
       </Container>
-    </header>
+    </nav>
   );
 }

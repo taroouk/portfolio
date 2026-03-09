@@ -1,158 +1,78 @@
-import { motion } from "framer-motion";
 import { Container } from "../components/Container";
 
 export function Hero() {
   return (
-    <section id="top" className="relative py-20">
-      {/* Background */}
-      <div className="fixed inset-0 -z-10 bg-[#05060a]" />
-      <div className="fixed inset-0 -z-10 opacity-70 [background:radial-gradient(1000px_circle_at_15%_10%,rgba(99,102,241,0.22),transparent_55%),radial-gradient(900px_circle_at_85%_20%,rgba(34,211,238,0.18),transparent_55%),radial-gradient(900px_circle_at_50%_90%,rgba(168,85,247,0.14),transparent_60%)]" />
+    <section className="relative py-32 overflow-hidden">
+
+      {/* glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/20 blur-[120px] rounded-full"></div>
 
       <Container>
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          <motion.div
-            initial="hidden"
-            animate="show"
-            variants={{
-              hidden: { opacity: 0 },
-              show: { opacity: 1, transition: { staggerChildren: 0.08 } },
-            }}
-          >
-            <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 10, filter: "blur(6px)" },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
-                },
-              }}
-              className="text-sm text-white/60"
-            >
-              Full-Stack Developer • Freelance
-            </motion.p>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            <motion.h1
-              variants={{
-                hidden: { opacity: 0, y: 14, filter: "blur(8px)" },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
-                },
-              }}
-              className="mt-3 text-4xl font-bold leading-tight md:text-6xl"
-            >
-              Hi, I’m Tarek Ahmed
-            </motion.h1>
+          {/* text */}
+          <div>
+            <span className="text-sm text-white/50">
+              Full Stack Developer – Available for freelance projects
+            </span>
 
-            <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 12, filter: "blur(6px)" },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
-                },
-              }}
-              className="mt-6 max-w-xl text-base leading-7 text-white/70"
-            >
-              I build end-to-end web applications — clean UI on the frontend,
-              solid APIs and business logic on the backend, and reliable deployments.
-            </motion.p>
+            <h1 className="text-5xl font-bold leading-tight mt-4">
+              I build polished <br />
+              web products <br />
+              that feel premium.
+            </h1>
 
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 10 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
-                },
-              }}
-              className="mt-8 flex flex-wrap gap-4"
-            >
+            <p className="text-white/60 mt-6 max-w-lg">
+              Hi, I'm Tarek Ahmed. I design and develop complete web
+              experiences from modern interfaces to robust backend APIs.
+            </p>
+
+            <div className="flex gap-4 mt-8">
               <a
                 href="#projects"
-                className="rounded-xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:-translate-y-0.5 hover:opacity-90"
+                className="bg-white text-black px-6 py-3 rounded-xl font-medium"
               >
                 View Projects
               </a>
 
               <a
-                href="#contact"
-                className="rounded-xl border border-white/20 px-6 py-3 text-sm transition hover:-translate-y-0.5 hover:bg-white/5"
+                href="/cv.pdf"
+                className="border border-white/20 px-6 py-3 rounded-xl"
               >
-                Contact Me
-              </a>
-            </motion.div>
-
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 8 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
-                },
-              }}
-              className="mt-8 flex flex-wrap items-center gap-3 text-sm text-white/70"
-            >
-              <a className="hover:text-white" href="mailto:tarekelfanty@gmail.com">
-                tarekelfanty@gmail.com
-              </a>
-              <span className="text-white/30">•</span>
-              <a className="hover:text-white" href="tel:+201033967886">
-                +20 10 339 67886
-              </a>
-              <span className="text-white/30">•</span>
-              <a
-                className="hover:text-white"
-                href="https://github.com/taroouk"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-              <span className="text-white/30">•</span>
-              <a
-                className="hover:text-white"
-                href="https://www.facebook.com/tarek.ahmed.zakaria"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Facebook
-              </a>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="relative"
-          >
-            <div className="absolute -inset-8 rounded-full bg-white/10 blur-3xl" />
-
-            <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[32px] border border-white/15 bg-black/40 p-8">
-              <div className="text-sm text-white/60">Available for freelance</div>
-              <div className="mt-2 text-2xl font-semibold tracking-tight">
-                Let’s build something solid.
-              </div>
-              <div className="mt-4 text-sm leading-6 text-white/70">
-                Clean UI, reliable APIs, and production-ready deployments.
-              </div>
-              <a
-                href="#contact"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-medium text-black hover:opacity-90"
-              >
-                Get in touch
+                Show CV
               </a>
             </div>
-          </motion.div>
+          </div>
+
+          {/* image */}
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-4">
+              <img
+                src="/hero.png"
+                className="rounded-xl"
+              />
+
+              <div className="grid grid-cols-3 gap-4 mt-4 text-center text-sm">
+
+                <div className="bg-white/5 rounded-lg py-2">
+                  <div className="font-bold">10+</div>
+                  <div className="text-white/50">Projects</div>
+                </div>
+
+                <div className="bg-white/5 rounded-lg py-2">
+                  <div className="font-bold">4+</div>
+                  <div className="text-white/50">Years</div>
+                </div>
+
+                <div className="bg-white/5 rounded-lg py-2">
+                  <div className="font-bold">24h</div>
+                  <div className="text-white/50">Response</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
       </Container>
     </section>
