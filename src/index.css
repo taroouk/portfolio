@@ -53,3 +53,24 @@ body::after {
   background: rgba(255, 255, 255, 0.16);
   color: white;
 }
+
+input,
+textarea,
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+section {
+  position: relative;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

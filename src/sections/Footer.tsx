@@ -2,11 +2,15 @@ import { Container } from "../components/Container";
 
 export function Footer() {
   return (
-    <footer className="py-10">
+    <footer className="pb-8 pt-6">
       <Container>
-        <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-white/50">
-          <span>© {new Date().getFullYear()} Tarek Ahmed</span>
-          <a className="hover:text-white" href="#top">
+        <div className="flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 text-sm text-white/45 md:flex-row md:items-center">
+          <p>© 2026 Tarek Ahmed. All rights reserved.</p>
+
+          <a
+            href="#top"
+            className="transition hover:text-white"
+          >
             Back to top
           </a>
         </div>
