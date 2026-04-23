@@ -18,7 +18,7 @@ function SocialIcon({
       target="_blank"
       rel="noreferrer"
       aria-label={label}
-      className={`flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white/70 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.08] ${hoverClass}`}
+      className={`flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white/70 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.08] hover:shadow-[0_0_40px_rgba(168,85,247,0.15)] ${hoverClass}`}
     >
       {children}
     </a>
@@ -68,7 +68,7 @@ function MailIcon() {
 function SnapchatIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-      <path d="M12 2c-2.3 0-4.3 1.9-4.3 4.3v2c0 .3-.1.6-.3.9-.3.5-.8.9-1.3 1.1-.5.1-.8.6-.6 1.1.1.4.5.7.9.7h.1c.6 0 1.1.2 1.5.6.4.4.6 1 .6 1.6v.2c0 .6-.2 1.2-.6 1.6-.3.3-.7.5-1 .6-.4.1-.7.5-.7.9 0 .5.4.9.9.9h.1c.5 0 1 .2 1.5.5.6.4 1.1 1 1.5 1.6.2.4.6.6 1 .6h1.2c.4 0 .8-.2 1-.6.4-.6.9-1.2 1.5-1.6.5-.3 1-.5 1.5-.5h.1c.5 0 .9-.4.9-.9 0-.4-.3-.8-.7-.9-.3-.1-.7-.3-1-.6-.4-.4-.6-1-.6-1.6v-.2c0-.6.2-1.2.6-1.6.4-.4.9-.6 1.5-.6h.1c.4 0 .8-.3.9-.7.2-.5-.1-1-.6-1.1-.5-.2-1-.6-1.3-1.1-.2-.3-.3-.6-.3-.9v-2C16.3 3.9 14.3 2 12 2Z"/>
+      <path d="M12 2c-2.3 0-4.3 1.9-4.3 4.3v2c0 .3-.1.6-.3.9-.3.5-.8.9-1.3 1.1-.5.1-.8.6-.6 1.1.1.4.5.7.9.7h.1c.6 0 1.1.2 1.5.6.4.4.6 1 .6 1.6v.2c0 .6-.2 1.2-.6 1.6-.3.3-.7.5-1 .6-.4.1-.7.5-.7.9 0 .5.4.9.9.9h.1c.5 0 1 .2 1.5.5.6.4 1.1 1 1.5 1.6.2.4.6.6 1 .6h1.2c.4 0 .8-.2 1-.6.4-.6.9-1.2 1.5-1.6.5-.3 1-.5 1.5-.5h.1c.5 0 .9-.4.9-.9 0-.4-.3-.8-.7-.9-.3-.1-.7-.3-1-.6-.4-.4-.6-1-.6-1.6v-.2c0-.6.2-1.2.6-1.6.4-.4.9-.6 1.5-.6h.1c.4 0 .8-.3.9-.7.2-.5-.1-1-.6-1.1-.5-.2-1-.6-1.3-1.1-.2-.3-.3-.6-.3-.9v-2C16.3 3.9 14.3 2 12 2Z" />
     </svg>
   );
 }
@@ -77,28 +77,29 @@ export function Contact() {
   const base = import.meta.env.BASE_URL;
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 md:py-24 lg:py-28">
       <Container>
+        <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.28)] backdrop-blur-xl transition-all duration-300 ease-out hover:shadow-[0_0_40px_rgba(168,85,247,0.15)] md:p-10 lg:p-12">
+          <div className="mb-8 border-b border-white/10 pb-8 md:mb-10">
+            <SectionTitle
+              title="Let’s Connect"
+              subtitle="Have a project in mind, need a developer, or want to discuss a collaboration? I’d be glad to hear from you."
+            />
+          </div>
 
-        <div className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 md:p-10">
-
-          <SectionTitle
-            title="Contact"
-            subtitle="Have a project idea? Let’s talk and build something polished."
-          />
-
-          <div className="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-
-            {/* LEFT SIDE */}
-
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="space-y-6">
+              <div className="rounded-[28px] border border-white/10 bg-black/20 p-6 md:p-7">
+                <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/45">
+                  Contact Channels
+                </div>
 
-              <div className="rounded-3xl border border-white/10 bg-black/25 p-6">
+                <p className="mt-4 text-sm leading-7 text-white/68">
+                  Reach out through social platforms, email, or WhatsApp. I’m open
+                  to freelance work, collaborations, and product discussions.
+                </p>
 
-                <p className="text-sm font-medium text-white">Connect</p>
-
-                <div className="mt-5 flex flex-wrap items-center gap-3">
-
+                <div className="mt-6 flex flex-wrap items-center gap-3">
                   <SocialIcon
                     href="https://www.instagram.com/tarookk_"
                     label="Instagram"
@@ -126,29 +127,23 @@ export function Contact() {
                   <SocialIcon
                     href="https://github.com/taroouk"
                     label="GitHub"
-                    hoverClass="hover:text-white"
+                    hoverClass="hover:text-purple-300"
                   >
                     <GithubIcon />
                   </SocialIcon>
 
                   <a
                     href="mailto:tarekelfanty@gmail.com"
-                    className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/80 transition hover:border-white/20 hover:bg-white/[0.08]"
+                    className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white/80 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-purple-500/10 hover:shadow-[0_0_40px_rgba(168,85,247,0.12)]"
                   >
                     <MailIcon />
                     Email me
                   </a>
-
                 </div>
-
               </div>
 
-              {/* SNAPCHAT */}
-
-              <div className="overflow-hidden rounded-3xl border border-white/10 bg-black/25">
-
+              <div className="overflow-hidden rounded-[28px] border border-white/10 bg-black/20">
                 <div className="flex items-center gap-3 border-b border-white/10 px-6 py-4">
-
                   <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-yellow-400 text-black">
                     <SnapchatIcon />
                   </div>
@@ -157,39 +152,42 @@ export function Contact() {
                     <p className="text-sm font-medium text-white">Snapchat</p>
                     <p className="text-xs text-white/55">Scan to add me</p>
                   </div>
-
                 </div>
 
-                <div className="px-5 pb-4 pt-2">
-
+                <div className="px-5 pb-5 pt-4">
                   <div className="mx-auto max-w-[220px] overflow-hidden rounded-[22px] border border-white/10 bg-white">
-
                     <img
                       src={`${base}snapchat.jpg`}
                       alt="Snapchat QR"
                       className="w-full object-cover"
                     />
-
                   </div>
-
                 </div>
-
               </div>
-
             </div>
-
-            {/* FORM */}
 
             <form
               action="https://formspree.io/f/xvgbyadg"
               method="POST"
-              className="rounded-3xl border border-white/10 bg-black/25 p-5 md:p-6"
+              className="rounded-[28px] border border-white/10 bg-black/20 p-5 md:p-6 lg:p-7"
             >
+              <div className="mb-6">
+                <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/45">
+                  Send a Message
+                </div>
+                <p className="mt-3 text-sm leading-7 text-white/65">
+                  Share a few details about your idea, project scope, or the kind
+                  of collaboration you’re looking for.
+                </p>
+              </div>
 
-              <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Portfolio Contact Message"
+              />
 
               <div className="space-y-4">
-
                 <div>
                   <label className="mb-2 block text-sm text-white/70">
                     Your Name
@@ -200,7 +198,7 @@ export function Contact() {
                     name="name"
                     placeholder="John Doe"
                     required
-                    className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white"
+                    className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white transition-all duration-300 ease-out focus:border-purple-400/40 focus:bg-purple-500/[0.06]"
                   />
                 </div>
 
@@ -214,7 +212,7 @@ export function Contact() {
                     name="email"
                     placeholder="john@example.com"
                     required
-                    className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white"
+                    className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white transition-all duration-300 ease-out focus:border-purple-400/40 focus:bg-purple-500/[0.06]"
                   />
                 </div>
 
@@ -228,25 +226,20 @@ export function Contact() {
                     rows={7}
                     placeholder="Tell me about your project..."
                     required
-                    className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white"
+                    className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white transition-all duration-300 ease-out focus:border-purple-400/40 focus:bg-purple-500/[0.06]"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-white px-6 py-3 text-sm font-medium text-black hover:opacity-90"
+                  className="w-full rounded-2xl bg-gradient-to-r from-purple-500 to-fuchsia-500 px-6 py-3 text-sm font-medium text-white transition-all duration-300 ease-out hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_0_40px_rgba(168,85,247,0.2)]"
                 >
-                  Send message
+                  Send Message
                 </button>
-
               </div>
-
             </form>
-
           </div>
-
         </div>
-
       </Container>
     </section>
   );

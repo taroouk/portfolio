@@ -1,14 +1,16 @@
+// src/data/skills.ts
 export const skills = [
   "React",
   "TypeScript",
+  "JavaScript",
   "Node.js",
-  "Express",
+  "Express.js",
   "MongoDB",
   "REST APIs",
   "Tailwind CSS",
   "HTML",
   "CSS",
-  "JavaScript",
   "Git & GitHub",
+  "Responsive Design",
   "Deployment",
 ];

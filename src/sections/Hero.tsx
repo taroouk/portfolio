@@ -5,29 +5,38 @@ export function Hero() {
   const base = import.meta.env.BASE_URL;
 
   return (
-    <section id="top" className="relative overflow-hidden pt-16 pb-20 md:pt-20 md:pb-24">
-      <div className="absolute left-1/2 top-12 -z-10 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[140px]" />
-      <div className="absolute right-[10%] top-[18%] -z-10 h-[300px] w-[300px] rounded-full bg-cyan-400/8 blur-[120px]" />
+    <section
+      id="top"
+      className="relative overflow-hidden pt-10 pb-16 md:pt-16 md:pb-24 lg:pt-20 lg:pb-28"
+    >
+      {/* Background glow */}
+      <div className="absolute left-1/2 top-8 -z-10 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-purple-500/10 blur-[140px]" />
+      <div className="absolute right-[8%] top-[16%] -z-10 h-[280px] w-[280px] rounded-full bg-fuchsia-500/10 blur-[120px]" />
 
       <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-[1.02fr_0.98fr]">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+          
+          {/* LEFT */}
           <motion.div
             initial="hidden"
             animate="show"
             variants={{
               hidden: { opacity: 0 },
-              show: { opacity: 1, transition: { staggerChildren: 0.08 } },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.08 },
+              },
             }}
-            className="max-w-[640px]"
+            className="max-w-[680px]"
           >
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
               }}
-              className="inline-flex rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[11px] text-white/60 backdrop-blur-sm"
+              className="inline-flex rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-white/60 backdrop-blur-sm"
             >
-              Full-Stack Developer • Available for freelance projects
+              Full-Stack Developer · React · Node.js
             </motion.div>
 
             <motion.h1
@@ -37,16 +46,18 @@ export function Hero() {
                   opacity: 1,
                   y: 0,
                   filter: "blur(0px)",
-                  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+                  transition: { duration: 0.65 },
                 },
               }}
-              className="mt-6 max-w-[620px] text-5xl font-semibold leading-[0.96] tracking-[-0.04em] text-white md:text-7xl"
+              className="mt-6 max-w-[700px] text-4xl font-semibold leading-[0.95] tracking-[-0.05em] sm:text-5xl md:text-6xl lg:text-7xl"
             >
-              I build polished
-              <br />
-              web products
-              <br />
-              that feel premium.
+              <span className="bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
+                I build scalable,
+                <br />
+                modern web experiences
+                <br />
+                with full-stack precision.
+              </span>
             </motion.h1>
 
             <motion.p
@@ -54,92 +65,74 @@ export function Hero() {
                 hidden: { opacity: 0, y: 12 },
                 show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
-              className="mt-7 max-w-[620px] text-[15px] leading-8 text-white/68 md:text-[17px]"
+              className="mt-6 max-w-[620px] text-[15px] leading-7 text-white/65 md:text-[17px] md:leading-8"
             >
-              Hi, I&apos;m Tarek Ahmed. I design and develop complete web
-              experiences — from modern interfaces to scalable backend APIs,
-              with a strong focus on smooth UX, refined visuals, and
-              production-ready quality.
+              I’m Tarek Ahmed, a full-stack developer focused on building
+              responsive interfaces, scalable backend systems, and polished
+              digital products that feel fast, clear, and production-ready.
             </motion.p>
 
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 10 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+                show: { opacity: 1, y: 0 },
               }}
-              className="mt-9 flex flex-wrap gap-4"
+              className="mt-8 flex gap-4"
             >
               <a
                 href="#projects"
-                className="rounded-2xl bg-white px-7 py-3.5 text-sm font-medium text-black transition hover:-translate-y-0.5 hover:opacity-90"
+                className="rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 px-7 py-3.5 text-sm text-white transition-all hover:-translate-y-0.5 hover:opacity-90"
               >
-                View Projects
+                Explore Projects
               </a>
 
               <a
                 href={`${base}cv.pdf`}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-2xl border border-white/15 bg-white/[0.04] px-7 py-3.5 text-sm text-white transition hover:-translate-y-0.5 hover:bg-white/[0.08]"
+                className="rounded-full border border-white/20 px-7 py-3.5 text-sm"
               >
-                Show CV
-              </a>
-            </motion.div>
-
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 10 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
-              }}
-              className="mt-8 flex flex-wrap items-center gap-3 text-xs text-white/52 md:text-sm"
-            >
-              <a className="transition hover:text-white" href="mailto:tarekelfanty@gmail.com">
-                tarekelfanty@gmail.com
-              </a>
-              <span className="text-white/20">•</span>
-              <a className="transition hover:text-white" href="tel:+201033967886">
-                WhatsApp: +20 10 339 67886
+                Download CV
               </a>
             </motion.div>
           </motion.div>
 
+          {/* RIGHT */}
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
-            className="relative mx-auto w-full max-w-[520px]"
+            transition={{ duration: 0.6 }}
+            className="relative mx-auto w-full max-w-[420px] pb-24"
           >
-            <div className="absolute -inset-10 rounded-full bg-cyan-400/10 blur-[120px]" />
+            <div className="relative">
+              <img
+                src={`${base}hero.png`}
+                alt="Tarek Ahmed"
+                className="h-[360px] w-full rounded-[28px] object-cover object-[center_20%] sm:h-[420px] md:h-[480px]"
+              />
 
-            <div className="relative rounded-[34px] border border-white/10 bg-gradient-to-b from-white/[0.09] to-white/[0.04] p-4 shadow-[0_25px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl">
-              <div className="overflow-hidden rounded-[26px] border border-white/10 bg-[radial-gradient(circle_at_top,#173047_0%,#0d1621_45%,#0a1017_100%)]">
-                <img
-                  src={`${base}hero.png`}
-                  alt="Tarek Ahmed portrait"
-                  className="h-[500px] w-full object-cover object-top md:h-[560px]"
-                />
-              </div>
-
-              <div className="absolute inset-x-4 bottom-4">
-                <div className="grid grid-cols-3 gap-3 rounded-[22px] border border-white/10 bg-[#0c1018]/88 p-3 backdrop-blur-xl">
-                  <div className="rounded-2xl bg-white/[0.05] py-3 text-center">
+              {/* Stats Box */}
+              <div className="absolute inset-x-3 -bottom-16">
+                <div className="grid grid-cols-3 gap-2 rounded-[20px] bg-[#0f0a18]/85 p-3 backdrop-blur-md shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
+                  
+                  <div className="rounded-[14px] bg-white/[0.05] py-3 text-center">
                     <div className="text-lg font-semibold text-white">10+</div>
-                    <div className="mt-1 text-[11px] text-white/55">Projects</div>
+                    <div className="text-[10px] text-white/45">PROJECTS</div>
                   </div>
 
-                  <div className="rounded-2xl bg-white/[0.05] py-3 text-center">
+                  <div className="rounded-[14px] bg-white/[0.05] py-3 text-center">
                     <div className="text-lg font-semibold text-white">4+</div>
-                    <div className="mt-1 text-[11px] text-white/55">Years</div>
+                    <div className="text-[10px] text-white/45">YEARS</div>
                   </div>
 
-                  <div className="rounded-2xl bg-white/[0.05] py-3 text-center">
-                    <div className="text-lg font-semibold text-white">24h</div>
-                    <div className="mt-1 text-[11px] text-white/55">Response</div>
+                  <div className="rounded-[14px] bg-white/[0.05] py-3 text-center">
+                    <div className="text-lg font-semibold text-white">UI + API</div>
+                    <div className="text-[10px] text-white/45">FULL STACK</div>
                   </div>
+
                 </div>
               </div>
             </div>
           </motion.div>
+
         </div>
       </Container>
     </section>

@@ -1,3 +1,4 @@
+// src/data/projects.ts
 export type ProjectStatus = "In Progress" | "Shipped";
 
 export type Project = {
@@ -14,32 +15,32 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "TooGoodForMerch",
-    subtitle: "Premium merch store — launching soon",
+    subtitle: "Full-stack e-commerce platform in progress",
     status: "In Progress",
     description:
-      "An upcoming e-commerce product focused on limited drops and a premium shopping experience, built with scalable full-stack foundations.",
+      "An e-commerce platform focused on limited drops and a premium shopping experience, built with a full-stack architecture designed for scalability, structured product management, and secure payment integration.",
     highlights: [
-      "Live Coming Soon page on a dedicated domain",
-      "Planned secure checkout and payments integration",
-      "Catalog structure designed for drops & collections",
-      "Performance-first UI with mobile-ready layout",
+      "Frontend and backend foundation prepared for a scalable store flow",
+      "Catalog structure planned for drops, collections, and product organization",
+      "Stripe integration planned for secure checkout and payments",
+      "Responsive interface built with performance and usability in mind",
     ],
-    tech: ["React", "TypeScript", "Node.js", "MongoDB", "Stripe (Planned)"],
+    tech: ["React", "TypeScript", "Node.js", "MongoDB", "REST APIs", "Stripe (Planned)"],
     liveUrl: "http://toogoodformerch.com/",
     image: "projects/toogoodformerch.jpg",
   },
   {
     title: "StyleSphere Store",
-    subtitle: "E-commerce storefront experience",
+    subtitle: "Modern e-commerce storefront",
     status: "Shipped",
     description:
-      "A modern storefront experience built around smooth browsing, clean UI, and clear product discovery.",
+      "A modern storefront experience built to improve product discovery through clean UI, responsive layouts, and a clear shopping flow.",
     highlights: [
-      "Conversion-friendly layout and sections",
-      "Responsive experience across devices",
-      "Clean information hierarchy for product browsing",
+      "Conversion-focused storefront layout and user flow",
+      "Responsive implementation across desktop and mobile devices",
+      "Clear product presentation with strong visual hierarchy",
     ],
-    tech: ["React", "TypeScript", "UI/UX", "E-commerce"],
+    tech: ["React", "TypeScript", "Tailwind CSS", "UI/UX", "E-commerce"],
     liveUrl: "https://stylesphere.store/",
     image: "projects/stylesphere.jpg",
   },
@@ -48,28 +49,28 @@ export const projects: Project[] = [
     subtitle: "Analytics dashboard interface",
     status: "Shipped",
     description:
-      "A dashboard-style web app focused on data visibility and admin-style layouts, built with scalable UI patterns.",
+      "A dashboard-style application focused on presenting analytics in a clear and structured way using reusable components and scalable interface patterns.",
     highlights: [
-      "Dashboard layout with stats-focused sections",
-      "Clear data hierarchy and reusable components",
-      "Built for scalability and iteration",
+      "Dashboard layout designed for data-heavy admin experiences",
+      "Reusable UI components for easier scaling and iteration",
+      "Clear hierarchy for metrics, sections, and content blocks",
     ],
-    tech: ["React", "TypeScript", "Dashboard UI"],
+    tech: ["React", "TypeScript", "Dashboard UI", "Reusable Components"],
     liveUrl: "https://insightboard.org/",
     image: "projects/insightboard.jpg",
   },
   {
     title: "DreamKey Partners",
-    subtitle: "Real estate website experience",
+    subtitle: "Real estate website",
     status: "Shipped",
     description:
-      "A real-estate web experience designed to highlight listings and streamline user inquiries with a clean layout.",
+      "A real estate web experience built to showcase listings clearly and support a smooth inquiry flow through responsive pages and structured content presentation.",
     highlights: [
-      "Listing-first layout with clear navigation",
-      "Mobile-first responsive pages",
-      "Designed for fast discovery and inquiry flow",
+      "Listing-focused layout with simple and intuitive navigation",
+      "Responsive pages optimized for browsing across devices",
+      "Inquiry flow designed to support lead generation",
     ],
-    tech: ["React", "TypeScript", "Responsive Design"],
+    tech: ["React", "TypeScript", "Responsive Design", "UI/UX"],
     liveUrl: "https://dreamkeypartners.org/",
     image: "projects/dreamkey.jpg",
   },
@@ -78,13 +79,13 @@ export const projects: Project[] = [
     subtitle: "Landing page for the Grand Egyptian Museum opening",
     status: "Shipped",
     description:
-      "A responsive landing page showcasing the GEM opening with a clean layout and modern structure.",
+      "A responsive landing page built to present the GEM opening in a clear and engaging format, with a modern layout and clean front-end structure.",
     highlights: [
-      "Fully responsive layout",
-      "Clean and structured HTML/CSS",
-      "Deployed as a public live demo",
+      "Responsive layout across multiple screen sizes",
+      "Clean HTML, CSS, and JavaScript structure",
+      "Published as a live public project",
     ],
-    tech: ["HTML", "CSS", "JavaScript"],
+    tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     liveUrl: "https://taroouk.github.io/GEM-OpeningProject/",
     image: "projects/gem-opening.jpg",
   },
