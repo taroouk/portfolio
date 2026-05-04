@@ -119,7 +119,7 @@ export function Hero() {
                   </div>
 
                   <div className="rounded-[14px] bg-white/[0.05] py-3 text-center">
-                    <div className="text-lg font-semibold text-white">4+</div>
+                    <div className="text-lg font-semibold text-white">3+</div>
                     <div className="text-[10px] text-white/45">YEARS</div>
                   </div>
 
