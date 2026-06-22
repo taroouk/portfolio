@@ -6,19 +6,18 @@ import { projects } from "../data/projects";
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 md:py-24">
+    <section id="projects" className="py-20 md:py-28">
       <Container>
-        <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.28)] md:p-10">
-          <SectionTitle
-            title="Projects"
-            subtitle="Selected full-stack work built around real use-cases, clean user experience, and solid implementation."
-          />
+        <SectionTitle
+          index=""
+          title="Projects with purpose."
+          subtitle="Selected freelance and project-based work across e-commerce, real estate, dashboards, and full-stack application development."
+        />
 
-          <div className="grid gap-8 md:gap-10">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} p={project} />
-            ))}
-          </div>
+        <div className="grid gap-8 md:gap-10">
+          {projects.map((project, index) => (
+            <ProjectCard key={project.title} p={project} index={index} />
+          ))}
         </div>
       </Container>
     </section>

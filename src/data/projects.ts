@@ -18,11 +18,11 @@ export const projects: Project[] = [
     subtitle: "Full-stack e-commerce platform in progress",
     status: "In Progress",
     description:
-      "An e-commerce platform focused on limited drops and a premium shopping experience, built with a full-stack architecture designed for scalability, structured product management, and secure payment integration.",
+      "A full-stack application in progress using React and Node.js, structured to support scalable business features, backend integrations, and future payment workflows.",
     highlights: [
-      "Frontend and backend foundation prepared for a scalable store flow",
-      "Catalog structure planned for drops, collections, and product organization",
-      "Stripe integration planned for secure checkout and payments",
+      "Scalable frontend and backend project structure with React and Node.js",
+      "Backend and API flow designed for future business integrations",
+      "Payment workflow planning with Stripe integration readiness",
       "Responsive interface built with performance and usability in mind",
     ],
     tech: ["React", "TypeScript", "Node.js", "MongoDB", "REST APIs", "Stripe (Planned)"],
@@ -34,11 +34,11 @@ export const projects: Project[] = [
     subtitle: "Modern e-commerce storefront",
     status: "Shipped",
     description:
-      "A modern storefront experience built to improve product discovery through clean UI, responsive layouts, and a clear shopping flow.",
+      "A modern e-commerce application built with reusable React components, frontend state handling, and responsive product experiences across devices.",
     highlights: [
-      "Conversion-focused storefront layout and user flow",
-      "Responsive implementation across desktop and mobile devices",
-      "Clear product presentation with strong visual hierarchy",
+      "Reusable React and TypeScript components for a scalable UI structure",
+      "Responsive product pages across desktop, tablet, and mobile",
+      "Clear product presentation and user-friendly shopping navigation",
     ],
     tech: ["React", "TypeScript", "Tailwind CSS", "UI/UX", "E-commerce"],
     liveUrl: "https://stylesphere.store/",
@@ -64,11 +64,11 @@ export const projects: Project[] = [
     subtitle: "Real estate website",
     status: "Shipped",
     description:
-      "A real estate web experience built to showcase listings clearly and support a smooth inquiry flow through responsive pages and structured content presentation.",
+      "A responsive real estate listings platform with structured property presentation, reusable frontend components, and clear navigation across screen sizes.",
     highlights: [
-      "Listing-focused layout with simple and intuitive navigation",
-      "Responsive pages optimized for browsing across devices",
-      "Inquiry flow designed to support lead generation",
+      "Reusable property cards and structured listing page components",
+      "Professional visual hierarchy for property presentation",
+      "Responsive behavior and smooth navigation across devices",
     ],
     tech: ["React", "TypeScript", "Responsive Design", "UI/UX"],
     liveUrl: "https://dreamkeypartners.org/",
