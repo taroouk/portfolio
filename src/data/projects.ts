@@ -15,16 +15,17 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Elfath Trading",
-    subtitle: "Industrial instrumentation catalog website",
+    subtitle: "Bilingual product catalog with a full admin dashboard",
     status: "Shipped",
     description:
-      "A bilingual (English/Arabic) company website and product catalog for an industrial instruments and valves supplier in Cairo, with category browsing, product pages, and quote requests.",
+      "A full-stack catalog website for an industrial instruments and valves company in Cairo, replacing its old WordPress site. Includes a bilingual public storefront (English and Arabic RTL) and an admin dashboard for managing products, categories, messages, and site settings.",
     highlights: [
-      "Catalog of 76 products across 10 categories with clear category navigation",
-      "Request-a-quote flow with WhatsApp, phone, email, and Facebook contact shortcuts",
-      "English and Arabic language support with a responsive layout",
+      "78 products across 10 categories with search, sorting, image galleries, data sheets, and per-branch WhatsApp inquiries",
+      "Admin dashboard with live visitor stats, multi-admin login, image uploads, inline price editing, and real-time updates",
+      "Server-rendered pages with per-language SEO, structured data, sitemap, and 301 redirects from the old WordPress URLs",
+      "Hardened with CSP, CSRF checks, login rate limiting, and spam-protected contact form; covered by 100+ API tests and 41 browser tests",
     ],
-    tech: ["React", "TypeScript", "Responsive Design", "Bilingual (EN/AR)", "UI/UX"],
+    tech: ["React", "Vite", "Express", "Node.js", "Neon Postgres", "Object Storage", "JWT Auth", "SEO", "i18n (EN/AR)"],
     liveUrl: "https://elfathtrading.com/",
     image: "projects/elfath-trading.jpg",
   },
